@@ -77,21 +77,23 @@
 
 ##### 참고 자료
 
-> https://git-scm.com/book/ko/v2 > <br>
+> https://git-scm.com/book/ko/v2 >
 
-#### Git CLI와 GUI
+<br>
+
+#### Git 기본 설정
 
 Git은 CLI와 GUI 방식으로 사용할 수 있다.
 Git GUI는 VS Code에도 내장되어 있어 손쉽게 사용할 수 있지만, Git의 모든 기능을 이용하고 싶다면 **CLI**를 사용하는 것이 좋다.
 나는 VS Code의 Terminal을 이용해 Git CLI를 사용하고 있다. 이 글에서는 Git을 처음 설치한 뒤 해야 하는 환경 설정에 대해 정리해 보았다.
 <br>
 
-#### VS Code terminal 기본 쉘 설정
+##### VS Code terminal 기본 쉘 설정
 
 Command Palette(`Ctrl+Shift+P`) => Select Default Profile => Git Bash 선택
 <br>
 
-#### 사용자 정보 설정
+##### 사용자 정보 설정
 
 git 사용자에 대한 정보를 설정한다. 이처럼 `--global` 옵션으로 하는 설정은 최초 한 번만 하면 된다.
 
@@ -101,12 +103,12 @@ git 사용자에 대한 정보를 설정한다. 이처럼 `--global` 옵션으�
   `git config --global user.email johndoe@example.com`
   <br>
 
-#### Git 기본 에디터 설정
+##### Git 기본 에디터 설정
 
 `git config --global core.editor "code --wait"`
 <br>
 
-#### 공백 문자 설정
+##### 공백 문자 설정
 
 `git config --global core.autocrlf true`
 
@@ -114,28 +116,31 @@ git 사용자에 대한 정보를 설정한다. 이처럼 `--global` 옵션으�
   `git config --global advice.ignoreCrLfWarning true`
   <br>
 
-#### 기본 브랜치 이름 변경
+##### 기본 브랜치 이름 변경
 
 기본 브랜치 이름을 master에서 main으로 변경한다.
 `config --global init.defaultBranch main`
 <br>
 
-#### Git log 간결하게 보기
+##### Git log 간결하게 보기
 
 `git config --global core.pager "less -F -X"`
 <br>
 
-#### Git Config 설정 확인
+##### Git Config 설정 확인
 
 Git 설정값을 확인할 수 있다.
 `git config --list`
+<br>
 
-#### Git init
+#### Git 명령어
+
+##### Git init
 
 현재 디렉토리를 git 저장소로 생성한다. .git 폴더(숨김 폴더)가 생성된다.
 <br>
 
-#### Git status
+##### Git status
 
 현재 상태를 확인할 수 있다.
 
@@ -144,12 +149,12 @@ Git 설정값을 확인할 수 있다.
 - nothing to commit, working tree clean: 변경 내용 없음
   <br>
 
-#### Git diff
+##### Git diff
 
 파일의 변경 내용을 비교할 수 있다.
 <br>
 
-#### Git add
+##### Git add
 
 Working Directory에 있는 파일의 변경사항을 Staging Area에 추가할 수 있다.
 
@@ -167,7 +172,7 @@ git add .
 
 <br>
 
-#### Git restore
+##### Git restore
 
 작업한 내용을 되돌릴 수 있다.
 
@@ -185,7 +190,7 @@ restore --staged <file>
 
 <br>
 
-#### Git commit
+##### Git commit
 
 파일의 변경 사항에 대한 내역을 생성한다.
 
@@ -204,7 +209,7 @@ git commit --amend
 
 <br>
 
-#### Git rebase
+##### Git rebase
 
 특정 커밋을 수정한다. hash에는 git log를 입력했을 때 뜨는 특정 커밋의 고유 번호를 입력한다. 또는 HEAD~ 뒤에 원하는 커밋의 순서를 입력한다. (HEAD에 있는 커밋이 1)
 
@@ -217,7 +222,7 @@ git rebase -i HEAD~<숫자>
 
 <br>
 
-#### Git log
+##### Git log
 
 커밋 이력을 확인할 수 있다.
 
@@ -235,7 +240,7 @@ git log --graph
 
 <br>
 
-#### Git checkout
+##### Git checkout
 
 과거 커밋 이력을 확인할 수 있다.
 
@@ -259,7 +264,7 @@ git checkout main
 
 <br>
 
-#### Git reset
+##### Git reset
 
 이전 커밋으로 복원할 수 있다.
 
@@ -283,7 +288,7 @@ reset --hard HEAD~<숫자>
 
 <br>
 
-#### Git branch
+##### Git branch
 
 브랜치를 생성, 삭제, 수정한다.
 
@@ -307,7 +312,7 @@ git branch -m <이름> <수정된 이름>
 
 <br>
 
-#### Git switch
+##### Git switch
 
 브랜치를 이동할 수 있다.
 
@@ -325,7 +330,7 @@ git switch -c <이름>
 
 <br>
 
-#### Git remote
+##### Git remote
 
 remote 브랜치를 담당하는 명령어
 
@@ -349,7 +354,7 @@ git remote rm origin
 
 <br>
 
-#### Git push
+##### Git push
 
 로컬 브랜치의 변경 이력을 리모트 브랜치로 전송한다.
 
@@ -366,7 +371,7 @@ git push -u origin <브랜치>
 
 <br>
 
-#### Git pull
+##### Git pull
 
 리모트 브랜치의 변경 이력을 로컬 브랜치로 가져온다. git fetch와 git merge를 합친 것이다.
 
@@ -376,7 +381,7 @@ git pull origin <브랜치>
 
 <br>
 
-#### Git merge
+##### Git merge
 
 브랜치를 병합한다.
 
@@ -390,9 +395,10 @@ git merge <브랜치>
 - 3-way merge
   <br>
 
-#### Git stash
+##### Git stash
 
 git에서 변경된 파일을 임시로 보관하고 나중에 다시 적용한다.
+
 <br>
 
 ### 🤔 느낀점
@@ -407,21 +413,27 @@ git에서 변경된 파일을 임시로 보관하고 나중에 다시 적용한�
 
 #### 단축키
 
-N: 프레임 한 장씩 이동
-[ / Ctrl + [ : 순서 위/아래로 이동
-Ctrl + P: 단축키 검색
-Alt + L: 레이어 모두 접기
-Shift + 방향키: big nudge 설정값만큼 이동(기본 패딩값)
+- N: 프레임 한 장씩 이동
+- [ / Ctrl + [ : 순서 위/아래로 이동
+- Ctrl + P: 단축키 검색
+- Alt + L: 레이어 모두 접기
+- Shift + 방향키: big nudge 설정값만큼 이동(기본 패딩값)
+
+<br>
 
 #### Component Variants
 
-/로 그룹 관리
-컴포넌트 작명: key=value, key=value…
+- /로 그룹 관리
+- 컴포넌트 작명: key=value, key=value…
+
+<br>
 
 #### Component property
 
-텍스트가 자주 바뀌는 컴포넌트에는 text property 넣기(동시에 수정 가능)
-icon의 경우 component set이 아닌 개별 component로 생성(화살표 제외)
+- 텍스트가 자주 바뀌는 컴포넌트에는 text property 넣기(동시에 수정 가능)
+- icon의 경우 component set이 아닌 개별 component로 생성(화살표 제외)
+
+<br>
 
 #### Auto Layout
 
@@ -431,7 +443,7 @@ Constraints: 개체 크기가 변경될 때 기준점을 설정
 
 ### 🤔 느낀점
 
-하루만에 figma의 모든 기능을 익히는 건 어려웠지만 핵심적인 기능들을 빠르게 배울 수 있어 좋았다. 기본적인 기능들을 어떻게 더 쉽게 사용할 수 있는지 알게 되었다.
+하루만에 figma의 모든 기능을 익히는 건 어려웠지만 핵심적인 기능들을 빠르게 배울 수 있어 좋았다. 기본적인 기능들을 어떻게 더 쉽게 사용할 수 있는지 알게 되었다. 앞으로 피그마를 더 자주 사용해보면서 익숙해져야겠다고 생각했다.
 
 <br>
 
@@ -525,26 +537,22 @@ git과 마찬가지로 프로젝트에서 자주 사용하는 node.js와 NPM의 
 - VS Code는 Emmet을 내장하고 있어 단축어를 통해 사용 가능함
 - Emmit이란? HTML, XML, XSL 문서 등을 편집할 때 빠른 코딩을 위해 사용하는 플러그인
 - 대소문자를 구분하지 않음
-
-<br />
+  <br />
 
 ##### 시맨틱 마크업
 
 용도에 맞는 요소를 사용해 마크업을 하는 것
-
 <br />
 
 ##### 중첩 태그(Nesting Tag)
 
 태그 안에 태그를 넣는 것
-
 <br />
 
 ##### 빈 태그(Empty Element)
 
 종료 태그가 없는 태그
 `<input>, <img>...`
-
 <br />
 
 ##### 속성(Attributes)
@@ -554,8 +562,7 @@ git과 마찬가지로 프로젝트에서 자주 사용하는 node.js와 NPM의 
 
 - 논리 속성: required처럼 값이 필요하지 않은 속성
   `<input type="radio" required/>`
-
-<br />
+  <br />
 
 ##### HTML 기본 구조
 
@@ -572,7 +579,6 @@ git과 마찬가지로 프로젝트에서 자주 사용하는 node.js와 NPM의 
 <br />
 
 VS Code에 ! 입력 시 자동완성됨
-
 <br />
 
 ##### XTML
@@ -585,8 +591,7 @@ VS Code에 ! 입력 시 자동완성됨
   `<img />`
 - 속성은 반드시 값을 가져야 함
   `<input type="radio" required="required"/>`
-
-<br />
+  <br />
 
 ##### HTML5
 
@@ -599,9 +604,8 @@ VS Code에 ! 입력 시 자동완성됨
 - HTML 4.01과 XHTML 1.0의 형식을 모두 허용
 - 소문자로 작성 권장
 - 특수문자는 Entity Code로 변환해 사용
-  참고 사이트: https://entitycode.com/#featured-content
-
-<br />
+  (참고 사이트: https://entitycode.com/#featured-content)
+  <br />
 
 ##### Vs Code 설정
 
@@ -626,14 +630,11 @@ VS Code에 ! 입력 시 자동완성됨
 - Prettier Extension 설정
   ![](https://velog.velcdn.com/images/hjb0304/post/6f8d67da-1a4c-4172-934f-d2e6315b0a7f/image.PNG)
   탐색기에 **format**을 검색해 나온 창에서 위 이미지처럼 설정을 변경해 Prettier를 기본 포맷터로 만들고 저장 시 포맷이 이루어지도록 한다.
-
-<br />
+  <br />
 
 ##### 참고 사이트
 
-> - https://web.dev/learn/html
-
-- https://developer.mozilla.org/ko/docs/Learn_web_development/Core/Structuring_content
+> https://web.dev/learn/html > https://developer.mozilla.org/ko/docs/Learn_web_development/Core/Structuring_content
 
 <br />
 
@@ -646,6 +647,8 @@ VS Code에 ! 입력 시 자동완성됨
 <h2>제목</h2>
 ```
 
+<br>
+
 #### HTML 문단
 
 > 문단을 표시하는 태그
@@ -654,23 +657,27 @@ VS Code에 ! 입력 시 자동완성됨
 <p>문단</p>
 ```
 
+<br>
+
 #### HTML 목록
 
 > 비순차 목록과 순차 목록을 표시하는 태그
 
 ```
-/// 비순차 목록
+ <!-- 비순차 목록 -->
 <ul>
   <li>항목1</li>
   <li>항목2</li>
 </ul>
 
-/// 순차 목록
+ <!-- 순차 목록 -->
 <ol>
   <li>항목1</li>
   <li>항목2</li>
 </ol>
 ```
+
+<br>
 
 #### HTML 이미지
 
@@ -718,6 +725,8 @@ alt="밴앤제리스 파인트 아이스크림"
 
 > https://developer.mozilla.org/ko/docs/Web/HTML/Element
 
+<br>
+
 #### HTML 하이퍼링크
 
 ##### a(앵커)
@@ -742,8 +751,10 @@ alt="밴앤제리스 파인트 아이스크림"
 
 <br>
 
-- `rel` 링크 유형 속성 -`noopener`: 링크 클릭 시 브라우저 컨텍스트 권한 없이 열림. 신뢰할 수 없는 링크를 열 때 유용함 -`noreferrer`: 링크 클릭 시 referrer header를 생략하고 참조자 정보를 유출하지 않게 한다.
-  => target="\_blank"와 함께 설정하는 것이 보안상 안전함
+- `rel` 링크 유형 속성
+  - `noopener`: 링크 클릭 시 브라우저 컨텍스트 권한 없이 열림. 신뢰할 수 없는 링크를 열 때 유용함
+  - `noreferrer`: 링크 클릭 시 referrer header를 생략하고 참조자 정보를 유출하지 않게 한다.
+    => target="\_blank"와 함께 설정하는 것이 보안상 안전함
 
 ```
 <a href="https://www.naver.com" target="_blank" rel="noopener noreferrer">네이버</a>
@@ -779,4 +790,6 @@ HTML은 나에게 아주 익숙한 존재라고 생각했지만, 생각보다 �
 
 <br>
 
-## 종합적인 느낀점
+## 😎 종합적인 느낀점
+
+그날그날 배운 내용을 바로 정리하고, 궁금한 점은 검색해보고 질문하며 회고를 하는 것이 아주 중요한 일이라는 걸 느꼈다. 멋쟁이 사자처럼 프론트엔드 스쿨을 수강한지 이제 겨우 1, 2주가 지났을 뿐인데 굉장히 많은 내용을 배우며 성장한 나 자신을 발견할 수 있었다. 앞으로도 초심을 간직하고 공부를 게을리하지 말아야겠다. 남은 HTML/CSS 수업에서는 또 어떤 새로운 내용들을 배우게 될지 기대가 된다!
