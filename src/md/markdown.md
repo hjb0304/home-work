@@ -16,7 +16,7 @@
 
   ```
 
-  #제목1
+  # 제목1
 
 - 제목 레벨 2 <br>
 
@@ -26,7 +26,7 @@
 
   ```
 
-  ##제목2
+  ## 제목2
 
     <br>
 
@@ -251,7 +251,7 @@ ___굵고 기울인 텍스트___
 
 ## 코드 블록(Code Blocks)
 
-코드 블록을 표시할 수 있다. 첫 번째 구분 기호 뒤에 `언어를 지정하면 색상 강조 표시가 된다.
+코드 블록을 표시할 수 있다. 첫 번째 구분 기호 뒤에 언어를 지정하면 색상 강조 표시가 된다.
 ```
 
 ```json
@@ -324,3 +324,9 @@ ___굵고 기울인 텍스트___
 [![The San Juan Mountains 이미지](https://mdg.imgix.net/assets/images/san-juan-mountains.jpg "San Juan Mountains")](https://www.flickr.com)
 
 ````
+
+<br>
+
+## 참고 사이트
+
+> https://www.markdownguide.org/basic-syntax/
