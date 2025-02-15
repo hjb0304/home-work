@@ -325,7 +325,6 @@ ___굵고 기울인 텍스트___
 ```
 [![The San Juan Mountains 이미지](https://mdg.imgix.net/assets/images/san-juan-mountains.jpg "San Juan Mountains")](https://www.flickr.com)
 
-````
 
 <br>
 
