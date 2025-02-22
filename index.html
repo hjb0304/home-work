@@ -50,11 +50,21 @@
 
       .homework-links {
         display: flex;
-        justify-content: center;
-        gap: 1rem;
+        /* justify-content: center; */
+        gap: 10px;
         margin: 0;
         padding: 0;
         list-style: none;
+        font-size: 14px;
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+        span {
+          display: inline-block;
+          width: 37px;
+          line-height: 2;
+          text-align: left;
+        }
       }
 
       .homework-links a {
@@ -64,7 +74,7 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         padding: 4px 8px;
-        font-size: 14px;
+        display: inline-block;
       }
 
       .homework-links a:hover {
@@ -88,13 +98,23 @@
         class="profile-image"
       />
       <h1 class="name">배희정</h1>
-      <p class="bio">멋쟁이 사자처럼 프론트엔드 부트캠프 13기 <strong>배희정</strong>입니다.</p>
-      <hr/>
+      <p class="bio">
+        멋쟁이 사자처럼 프론트엔드 부트캠프 13기 <strong>배희정</strong>입니다.
+      </p>
+      <hr />
       <p>과제 결과는 링크를 선택해주세요.</p>
-      <ul class="homework-links">
-        <li><a href="./src/md/markdown.md">🔍 마크다운 문법</a></li>
-        <li><a href="./src/md/retrospect.md">🧐 회고</a</li>
-      </ul>
+      <div class="homework-wrap">
+        <ul class="homework-links">
+          <li><span>1~2주</span></li>
+          <li><a href="./src/md/markdown.md">🔍 마크다운 문법</a></li>
+          <li><a href="./src/md/retrospect.md">🧐 회고</a></li>
+        </ul>
+        <ul class="homework-links">
+          <li><span>3주</span></li>
+          <li><a href="./src/avatars/avatars.html">🔍 아바타</a></li>
+          <li><a href="./src/avatars/avatars.md">🧐 회고</a></li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
