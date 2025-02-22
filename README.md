@@ -9,5 +9,5 @@
 
 ## 3주차: 아바타
 
-- [아바타] (./src/md/avatars.html)
-- [회고] (./src/avatars/avatars.md)
+- [아바타](./src/avatars/avatars.html)
+- [회고](./src/avatars/avatars.md)
