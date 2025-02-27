@@ -1,0 +1,15 @@
+.sr-only {
+  position: absolute;
+  /* 가상커서가 포커스될 수 있는 최소한의 크기를 줌 */
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  /* width, height 1px 때문에 음수마진을 줌 */
+  margin: -1px;
+  overflow: hidden;
+  /* absolute와 같이 사용해야 함. 요소 일부를 잘라냄. clip-path를 사용하는 게 나음 */
+  clip: rect(0, 0, 0, 0);
+  /* 아래 속성들은 예외 케이스 때문에 존재 */
+  white-space: nowrap;
+  border-width: 0;
+}

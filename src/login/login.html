@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이버 로그인</title>
+    <link
+      rel="shortcut icon"
+      href="../src/assets/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="../src/assets/favicon/likelion.svg" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="./styles/login.css" />
+  </head>
+  <body>
+    <div class="login-wrap">
+      <h1 class="logo"><img src="./images/naver_logo.svg" alt="" /></h1>
+      <form action="/" class="login-form">
+        <div class="login-input-wrap">
+          <input type="text" class="login-input" placeholder="아이디" />
+          <p class="error">아이디는 이메일 형식으로 입력해 주세요</p>
+        </div>
+        <div class="login-input-wrap">
+          <input type="text" class="login-input" placeholder="비밀번호" />
+          <p class="error">비밀번호는 10자리 이상 입력해 주세요</p>
+        </div>
+        <button class="login-btn" type="submit">로그인</button>
+      </form>
+      <div class="status">
+        <div class="login-status">
+          <input type="checkbox" name="login-check" id="login-check" />
+          <label for="login-check">로그인 상태 유지</label>
+        </div>
+        <div class="security-status">
+          <a href="./pages/ip_security.html">IP 보안<span>ON</span></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
