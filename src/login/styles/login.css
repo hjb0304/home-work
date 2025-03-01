@@ -31,12 +31,16 @@ a {
   background: var(--primary-color);
   color: var(--white-color);
   border: 0;
-  padding: 1rem 0;
   margin-bottom: 0.625rem;
   align-content: center;
   font-weight: var(--text-bold);
 }
 
+.wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
 .login-wrap {
   width: 100%;
   margin: 0 auto;
@@ -44,9 +48,12 @@ a {
   .logo {
     width: 230px;
     margin: 0 auto 2.8125rem auto;
-    padding-top: 3.125rem;
   }
   .login-form {
+    fieldset {
+      border: 0;
+      padding: 0;
+    }
     .login-input-wrap {
       .login-input {
         width: 100%;
@@ -79,6 +86,8 @@ a {
   }
   .status {
     display: flex;
+    justify-content: end;
+    align-items: center;
     .login-status {
       display: flex;
       align-items: center;
@@ -95,7 +104,6 @@ a {
         }
       }
       label {
-        margin-left: 0.25rem;
         font-size: 0.875rem;
       }
     }
@@ -106,6 +114,8 @@ a {
       }
       .text-btn {
         width: auto;
+        height: auto;
+        margin-bottom: 0;
         background: transparent;
         color: var(--light-gray-color);
         padding: 0;
@@ -117,7 +127,7 @@ a {
   }
 
   @media screen and (min-width: 769px) {
-    width: 460px;
+    width: 500px;
     .status {
       justify-content: space-between;
       .security-status {
