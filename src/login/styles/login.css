@@ -1,5 +1,6 @@
 @import url(../../common/modern-reset.css);
 @import url(../../common/a11y.css);
+
 :root {
   --primary-color: #03cf5d;
   --danger-color: #ff1414;
