@@ -1,0 +1,49 @@
+@import url(../../../common/modern-reset.css);
+@import url(../../../common/a11y.css);
+
+.switch-wrap {
+  display: inline-flex;
+  position: relative;
+  width: 2rem;
+  input {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+  }
+
+  &.text-switch {
+    input:checked + label::after {
+      content: "ON";
+      color: green;
+    }
+    label {
+      &::after {
+        content: "OFF";
+        font-weight: 700;
+        color: gray;
+      }
+    }
+  }
+  &.toggle-switch {
+    background: lightgray;
+    border: 2px solid lightgray;
+    border-radius: 1rem;
+    aspect-ratio: 2/1;
+    &:has(input:checked) {
+      background: green;
+      border: 2px solid green;
+    }
+    label {
+      background: #fff;
+      width: calc(50% - 2px);
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      transition: translate 0.3s;
+    }
+    input:checked + label {
+      translate: calc(100% + 2px) 0;
+    }
+  }
+}

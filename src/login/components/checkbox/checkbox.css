@@ -1,0 +1,23 @@
+@import url(../../common/modern-reset.css);
+@import url(../../common/a11y.css);
+
+.checkbox-wrap {
+  height: 1.5rem;
+  display: inline-flex;
+  position: relative;
+  input {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    margin: 0;
+    &:checked + label {
+      background: url(/src/login/images/checkbox_checked.svg) no-repeat;
+    }
+  }
+  label {
+    background: url(/src/login/images/checkbox_unchecked.svg) no-repeat;
+    padding-left: 32px;
+    align-content: center;
+  }
+}

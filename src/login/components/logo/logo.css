@@ -1,0 +1,12 @@
+@import url(../../common/modern-reset.css);
+@import url(../../common/a11y.css);
+
+.logo {
+  --size: 14.375rem;
+
+  width: var(--size);
+  display: block;
+  svg {
+    width: 100%;
+  }
+}
