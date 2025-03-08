@@ -1,3 +1,13 @@
-@import "./card-component.css";
+@import "../component/styles/card-component.css";
 
 /* 카드 레이아웃 */
+.container {
+  display: grid;
+  gap: 0.75rem;
+
+  .card {
+    &.ipad-pro {
+      background-image: url(../products/ipad_pro.jpeg);
+    }
+  }
+}

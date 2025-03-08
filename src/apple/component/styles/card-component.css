@@ -3,3 +3,32 @@
 @import "../../styles/base.css";
 @import "./button.css";
 @import "./text.css";
+
+.card {
+  --card-top-padding: var(--large-spacing);
+
+  height: var(--size);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--small-spacing);
+  padding-top: var(--card-top-padding);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: 1024px) {
+    --card-top-padding: var(--extra-large-spacing);
+  }
+
+  .head,
+  .subhead,
+  .info {
+    text-align: center;
+  }
+
+  .btn-wrap {
+    display: flex;
+    gap: var(--base-spacing);
+    margin: 0 auto;
+  }
+}

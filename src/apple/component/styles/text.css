@@ -5,7 +5,7 @@
 .head {
   --head-text: var(--large-text);
   font-size: var(--head-text);
-  color: var(--black);
+  font-weight: 600;
 
   @media (min-width: 1024px) {
     --head-text: var(--extra-large-text);
@@ -15,12 +15,22 @@
 .subhead {
   --subhead-text: var(--base-text);
   font-size: var(--subhead-text);
-  color: var(--black);
   line-height: var(--line-normal);
   margin-bottom: var(--x-small-spacing);
 
   @media (min-width: 1024px) {
     --subhead-text: var(--medium-text);
+  }
+}
+
+.head,
+.subhead {
+  --head-color: var(--black);
+
+  color: var(--head-color);
+
+  &.head-light {
+    --head-color: var(--white);
   }
 }
 
