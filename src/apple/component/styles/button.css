@@ -1,0 +1,44 @@
+@import "../../styles/theme.css";
+@import "../../styles/reset.css";
+@import "../../styles/base.css";
+
+:root {
+  --primary: var(--blue-300);
+  --basic: var(--black);
+  --radius: 1.5rem;
+}
+
+body {
+  margin: 20px;
+}
+
+.btn {
+  --btn-text: var(--xx-small-text);
+
+  font-size: var(--btn-text);
+  color: var(--white);
+  padding: var(--x-small-spacing) var(--base-spacing);
+  border-radius: var(--radius);
+
+  @media (min-width: 1024px) {
+    --btn-text: var(--x-small-text);
+  }
+
+  &.btn-primary {
+    --btn-outline-color: var(--primary);
+
+    background: var(--primary);
+  }
+
+  &.btn-basic {
+    --btn-outline-color: var(--black);
+
+    background: var(--black);
+  }
+
+  &.btn-outline {
+    background: transparent;
+    color: var(--btn-outline-color);
+    border: 1px solid currentColor;
+  }
+}

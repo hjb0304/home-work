@@ -1,0 +1,31 @@
+@import "../../styles/theme.css";
+@import "../../styles/reset.css";
+@import "../../styles/base.css";
+
+.head {
+  --head-text: var(--large-text);
+  font-size: var(--head-text);
+  color: var(--black);
+
+  @media (min-width: 1024px) {
+    --head-text: var(--extra-large-text);
+  }
+}
+
+.subhead {
+  --subhead-text: var(--base-text);
+  font-size: var(--subhead-text);
+  color: var(--black);
+  line-height: var(--line-normal);
+  margin-bottom: var(--x-small-spacing);
+
+  @media (min-width: 1024px) {
+    --subhead-text: var(--medium-text);
+  }
+}
+
+.info {
+  --info-text: var(--small-text);
+  font-size: var(--info-text);
+  color: var(--gray);
+}
