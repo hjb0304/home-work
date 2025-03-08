@@ -1,6 +1,12 @@
 @import "../component/styles/card-component.css";
 
 /* 카드 레이아웃 */
+
+*:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
 .container {
   display: grid;
   gap: 0.75rem;
