@@ -26,6 +26,14 @@
     text-align: center;
   }
 
+  .subhead {
+    @media (min-width: 1024px) {
+      br {
+        display: none;
+      }
+    }
+  }
+
   .btn-wrap {
     display: flex;
     gap: var(--base-spacing);

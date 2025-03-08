@@ -16,7 +16,7 @@
   --subhead-text: var(--base-text);
   font-size: var(--subhead-text);
   line-height: var(--line-normal);
-  margin-bottom: var(--x-small-spacing);
+  /* margin-bottom: var(--x-small-spacing); */
 
   @media (min-width: 1024px) {
     --subhead-text: var(--medium-text);
