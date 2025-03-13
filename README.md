@@ -21,3 +21,4 @@
 
 - [로그인](./src/apple/apple.html)
 - [회고](./src/apple/apple.md)
+## 배포(deploy) 준비
